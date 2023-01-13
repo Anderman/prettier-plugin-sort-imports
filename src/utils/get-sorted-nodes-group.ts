@@ -11,7 +11,7 @@ export const getSortedNodesGroup = (
             const diff = namespaceSpecifierSort(a, b);
             if (diff !== 0) return diff;
         }
-
+        naturalSort.insensitive = false;
         return naturalSort(a.source.value, b.source.value);
     });
 };
